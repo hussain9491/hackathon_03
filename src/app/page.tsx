@@ -7,6 +7,7 @@ import page3image1 from "../(auth)/page3image1.png"
 import page3image2 from "../(auth)/page3image2.png"
 import page3image3 from "../(auth)/page3image3.png"
 import page3image4 from "../(auth)/page3image4.png"
+// import page6bg from "../(auth)/page6bg.png"
 import page4item1 from "../(auth)/page4item1.png"
 import page4img1 from "../(auth)/page4img1.png"
 import page4img2 from "../(auth)/page4img2.png"
@@ -18,9 +19,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faClock , faCalendarAlt} from "@fortawesome/free-solid-svg-icons";
 export default function Home() {
   return (
-    <div>
-
-
+    <div className="overflow-x-hidden overflow-y-hidden">
       <div className="bg-yellow-100 min-h-80 ">
         {/* Header */}
         <header className="p-4">
@@ -29,7 +28,7 @@ export default function Home() {
             <nav className="flex space-x-14 justify-center  pl-[40%]">
               <a href="/" className="text-black hover:text-gray-700 hover:underline">Home</a>
               <a href="/shop" className="text-black hover:text-gray-700 hover:underline">Shop</a>
-              <a href="/about" className="text-black hover:text-gray-700 hover:underline">About</a>
+              <a href="/blog" className="text-black hover:text-gray-700 hover:underline">Blog</a>
               <Link href="/contact" className="text-black hover:text-gray-700 hover:underline">Contact</Link>
             </nav>
 
@@ -50,11 +49,11 @@ export default function Home() {
             <h1 className="text-4xl font-semibold text-black mb-4  ">Rocket single  <br /> <p className="pt-5"> seater</p> </h1>
             <a
               href="/shop"
-              className="inline-block font-medium text-black hover:text-gray-700  mt-4"
+              className="inline-block font-medium text-black hover:text-gray-700  mt-4 "
             >
               Shop Now
               <p className="text-black font-bold ">__________</p>
-            </a>
+             </a>
           </div>
 
           {/* Image Content */}
@@ -118,26 +117,24 @@ export default function Home() {
         <div className="flex  gap-6 justify-around items-center pt-20  " >
 
 
-          <div className="h-48 w-52">
-            <Image src={page3image1} alt="Trenton modular sofa_3" />
+          <div className="transform transition-transform duration-300 hover:scale-105 hover:shadow-lg h-48 w-52 ">
+          <button title="Trenton modular sofa_3">   <Image src={page3image1} alt="Trenton modular sofa_3" /> </button>
 
           </div>
 
-          <div className="h-48 w-52">
-            <Image src={page3image2} alt="Granite dining table with 
-dining chairs" />
+          <div className="transform transition-transform duration-300 hover:scale-105 hover:shadow-lg h-48 w-52">
+          <button title="Granite dining table with dining chairs"> <Image src={page3image2} alt="Granite dining table with dining chairs" /> </button>
 
           </div>
 
-          <div className="h-56 mb-10 w-52">
-            <Image src={page3image3} alt="Outdoor bar table and 
-stoole"/>
+          <div className="transform transition-transform duration-300 hover:scale-105 hover:shadow-lg h-56 mb-10 w-52">
+          <button title="Outdoor bar table and stoole"> <Image src={page3image3} alt="Outdoor bar table and stoole"/> </button>
 
           </div>
 
-          <div className="h-48 w-52">
-            <Image src={page3image4} alt="Plain console with teak 
-mirror" />
+          <div className="transform transition-transform duration-300 hover:scale-105 hover:shadow-lg h-48 w-52">
+          <button title="Plain console with teak mirror"> <Image src={page3image4} alt="Plain console with teak 
+mirror" /> </button>
 
           </div>
 
@@ -205,9 +202,9 @@ mirror" />
 
 <div className="flex flex-row ml-20 mr-20 pt-10  justify-around  rounded"> 
 
-<div><Image src={page4img1} alt="tea" width={362 } height={500}/>   </div>
-<div><Image src={page4img2} alt="laptop" width={362 } height={500}/>   </div>
-<div><Image src={page4img3} alt="tea-with-laptop" width={362 } height={500}/>   </div>
+<div className="transform transition-transform duration-300 hover:scale-105 hover:shadow-lg"><Image src={page4img1} alt="tea" width={362 } height={500}/>   </div>
+<div className="transform transition-transform duration-300 hover:scale-105 hover:shadow-lg"><Image src={page4img2} alt="laptop" width={362 } height={500}/>   </div>
+<div className="transform transition-transform duration-300 hover:scale-105 hover:shadow-lg"><Image src={page4img3} alt="tea-with-laptop" width={362 } height={500}/>   </div>
 
 
 </div>
@@ -267,9 +264,9 @@ mirror" />
 
 
 
- {/* Back ground image missing hai isii liye color daal dya */}
+ {/* Back ground image */}
 
-<div className="bg-slate-200 h-80 w-auto bg-cover ">
+<div className="bg-repeat bg-slate-400 h-96 w-screen bg-cover bg-center "  >
 
 <div className="    justify-center items-center pt-28 ">
   <h1 className="font-extrabold text-6xl text-center text-black">Our Instagram</h1>

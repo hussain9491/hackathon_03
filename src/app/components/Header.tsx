@@ -7,8 +7,8 @@ export default function Header() {
         {/* Navigation Links */}
         <nav className="flex space-x-16 justify-center  pl-[40%]">
           <a href="/" className="text-black hover:text-gray-700 hover:underline">Home</a>
-          <a href="/account" className="text-black hover:text-gray-700 hover:underline">Shop</a>
-          <a href="/about" className="text-black hover:text-gray-700 hover:underline">About</a>
+          <a href="/shop" className="text-black hover:text-gray-700 hover:underline">Shop</a>
+          <a href="/blog" className="text-black hover:text-gray-700 hover:underline">Blog</a>
           <Link href="/contact" className="text-black hover:text-gray-700 hover:underline">Contact</Link>
         </nav>
 
