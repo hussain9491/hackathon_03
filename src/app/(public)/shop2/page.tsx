@@ -23,6 +23,19 @@ import React from 'react'
   // import products from '@/sanity/schemaTypes/products'
   import { client } from '@/sanity/sanityClient'
   // import { client } from '@/sanity/client'
+
+  type Product = {
+    id: string;
+    name: string;
+    description: string;
+    price: number;
+    stockLevel: number;
+    discountPercentage: number;
+    isFeaturedProduct: boolean;
+    category: string;
+    imageUrl: string;
+  };
+
   async function fetchproducts() {
 
 
@@ -48,7 +61,7 @@ import React from 'react'
     return (
       <div className='overflow-x-hidden overflow-y-hidden  '>
         <Header />
-
+      
         {/* background section  */}
         <div className="h-80 w-full bg-Bi justify-center items-center pt-24 bg-cover bg-center">
 
@@ -60,6 +73,9 @@ import React from 'react'
           </div>
         </div>
 
+
+
+  
         {/* search option  */}
         <div className='bg-custompin h-20 mt-10 w-screen sticky top-0 flex justify-around items-center max-sm:hidden '>
           <div className='flex gap-4'>
@@ -388,8 +404,8 @@ import React from 'react'
                       </div>
 
 
-                  </div>
-              </div>
+                  </div> 
+              </div> 
 
 
 

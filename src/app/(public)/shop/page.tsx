@@ -1,8 +1,6 @@
 
-  // import products from '@/sanity/schemaTypes/products'
-  // import { client } from '@/sanity/sanityClient'
-// import { client } from '@/sanity/client'
 
+import ProductListing from "@/app/components/ProductListing";
 import Header from "../../components/Header"
 
 
@@ -28,6 +26,7 @@ export default async function Shop() {
   return (
     <div className="bg-gray-100">
       <Header />
+
       {/* Hero Section */}
 
 <div className="h-80 w-full bg-Bi justify-center items-center pt-24 bg-cover bg-center">
@@ -43,6 +42,13 @@ export default async function Shop() {
 </div>
 </div>
 
+
+      {/* Product listing */}
+      <div className=' grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4 '> 
+        {product.map((product: Product, index: any) => (
+          <ProductListing key={product.id || index} products={[product]} />
+        ))}
+      </div>
       {/* Product Grid */}
       <div className="p-8">
         <h2 className="text-4xl font-bold text-center mb-8">Our Products</h2>
@@ -50,10 +56,10 @@ export default async function Shop() {
           {product.map((product) => (
             <div
               key={product.id}
-              className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col"
+              className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-transform transform hover:scale-105"
             >
               {/* Product Image */}
-              <div className="relative h-64">
+              <div className="relative h-64 ">
                 <Image
                   src={product.imageUrl}
                   alt={product.name}
@@ -63,7 +69,7 @@ export default async function Shop() {
               </div>
 
               {/* Product Details */}
-              <div className="p-4 flex-1 flex flex-col">
+              <div className="p-4 flex-1 flex flex-col ">
                 <h3 className="text-lg font-semibold truncate">{product.name}</h3>
                 <p className="text-sm text-gray-600 mt-2 flex-grow">
                   {product.description.length > 50
